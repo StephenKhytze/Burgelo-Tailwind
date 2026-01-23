@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a6726e13c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Burgelo</title>
+    <link rel="icon" type="image/x-icon" href="/dist/img/favicon.png" />
+    <link rel="stylesheet" href="./scss/main.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+    </style>
+  </head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="branding">
+              <h3>123456789</h3>
+              <img src="./img/logo-df.svg" alt="" class="cart__btn">
+              <h3>kamote</h3>
+            </div>
+            <div class="burgir">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+  
+            <div class="header__nav">
+              <ul>
+                <li><a href="./menu.html">MENU</a></li>
+                <li><a href="javascript:show__menu();" class="home__menu__btn">HOME<div class="arrows">
+                    <i class="fa-solid fa-angle-up arrow-up"></i>
+                    <i class="fa-solid fa-angle-down arrow-down"></i>
+                  </div></a>
+                
+                  <section class="home__menu">
+                    <div class="container home__menu__wrapper ">
+                      <div class="items">
+                        <img src="./img/Frame-1.png" alt="">
+                        <img src="./img/Frame-2.png" alt="">
+                        <img src="./img/Frame-3.png" alt="">
+                        <img src="./img/Frame-4.png" alt="">
+                        <img src="./img/Frame-5.png" alt="">
+                        <img src="./img/Frame-6.png" alt="">
+                      </div>
+              
+                      <div class="pop__promos">
+                        <div class="pop__promos__item">
+                          <div class="promo__text">
+                            <h3>SPECIAL OFFER</h3>
+                            <h1>BUY 2 GET 3</h1>
+                          </div>
+                          <img src="./img/coffee.png" alt="">
+                          <div class="btn__container">
+                            <a href="javascript:void(0)" class="btn bg--primary">ORDER NOW</a>
+                          </div>
+                        </div>
+              
+                        <div class="pop__promos__item">
+                          <div class="promo__text">
+                            <h1>GET 25% OFF</h1>
+                            <h3>ON YOUR ORDER</h3>
+                          </div>
+                          <div class="btn__container">
+                            <a href="javascript:void(0)" class="btn bg--primary">ORDER NOW</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+  
+                </li>
+                <li><a href="javascript:void(0);">ABOUT</a></li>
+                <li><a href="javascript:void(0);">SERVICES</a></li>
+                <li><a href="javascript:void(0);">UPDATES</a></li>
+                <li><a href="javascript:void(0);">CONTACTS</a></li>
+              </ul>
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <section class="cart">
+      <div class="container">
+        <div class="blkOpacity"></div>
+        <div class="wrapper">
+          <div class="cart__title">
+            <h2>CART</h2>
+          </div>
+          <div class="cart__content"></div>
+          <div class="cart__buttons">
+            <a href="javascript:void(0)" class="btn bg--primary checkout">CHECKOUT</a>
+            <a href="javascript:void(0)" class="btn bg--primary close">CLOSE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="menu__page__page">
+        <div class="container">
+          <div class="menu__page__wrapper">
+  
+            <div class="menu__page__tabs">
+              <ul>
+                <li id="tab-1" class="tab__nav__link active"><img src="./img/sub-burger.png" alt=""><span>BURGERS</span></li>
+                <li id="tab-2" class="tab__nav__link"><img src="./img/sub-pasta.png" alt=""><span>PASTA</span></li>
+                <li id="tab-3" class="tab__nav__link"><img src="./img/sub-drinks.png" alt=""><span>DRINKS</span></li>
+              </ul>
+            </div>
+            
+            <!-- content of tabs -->
+            <div class="menu__page__content">
+
+
+
+              <!-- set for burgers -->
+              <!-- <div id="tab-1-content" class="menu__page__content__item active">
+                <div class="menu__page__item burger" id="burger-1">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/Bbq-burger_01-300x300.png" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>BBQ Burger</h4></a>
+                    <h3>$4.00 - $5.00</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-wrench"></i>SELECT OPTIONS</a>
+                  </div>
+                </div>
+  
+                <div class="menu__page__item burger" id="burger-2">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/Turkey-Burgers_01-300x300.webp" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Turkey Burgers</h4></a>
+                    <h3>$3.00 - $3.99</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-wrench"></i>SELECT OPTIONS</a>
+                  </div>
+                </div>
+  
+                <div class="menu__page__item burger" id="burger-3">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/The-Texas-Squealer-Burger_01-300x300.png" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>The Texas Squealer Burger</h4></a>
+                    <h3>$3.88</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+              </div> -->
+  
+              <!-- set for pasta -->
+              <!-- <div id="tab-2-content" class="menu__page__content__item">
+                <div class="menu__page__item pasta" id="pasta-1">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/pasta2_01-300x300.webp" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Pasta Neo</h4></a>
+                    <h3>$15.00</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+  
+                <div class="menu__page__item pasta" id="pasta-2">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/pasta4_01-300x300.png" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Pasta Italy</h4></a>
+                    <h3>$12.00</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+              </div> -->
+  
+              <!-- set for drinks -->
+              <!-- <div id="tab-3-content" class="menu__page__content__item">
+                <div class="menu__page__item drink" id="drink-1">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/Orange-juice-300x300.webp" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Orange Juice</h4></a>
+                    <h3>$1.88</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+  
+                <div class="menu__page__item drink" id="drink-2">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/cola_01-300x300.webp" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Cola</h4></a>
+                    <h3>$1.33</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+  
+                <div class="menu__page__item drink" id="drink-3">
+                  <a href="javascript:void(0)" class="img-food"><img src="./img/banana-juice_01-300x300.webp" alt=""></a>
+                  <div class="menu__page__item__text">
+                    <a href="javascript:void(0)" class="name-food"><h4>Banana Juice</h4></a>
+                    <h3>$1.50</h3>
+                    <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock...</p>
+                    <a href="" class="btn bg--primary add-to-cart menu__page"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a>
+                  </div>
+                </div>
+              </div> -->
+  
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <script src="./js/menu.js"></script>
+      <script src="./js/cart.js"></script>
+      <script src="./js/app.js"></script>
+</body>
+</html>

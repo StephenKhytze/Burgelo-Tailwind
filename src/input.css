@@ -1,0 +1,164 @@
+    @import "tailwindcss";
+
+    @theme {
+        --color-primary: #ffc139;
+        --color-dark: #2b2b2b;
+    }
+
+    .header__nav {
+        @apply -right-full transition-all ease-in-out duration-500;
+    }
+    .header__nav.open {
+        @apply right-0;
+    }
+    .burgir {
+        @apply transition-all ease-in-out duration-500;
+        span {
+            @apply w-6 h-[0.2rem] bg-white block transition-all ease-in-out duration-500;
+        }
+    }
+    .burgir.open{
+        @apply bg-transparent;
+        span {
+            @apply bg-black w-4.5;
+        }
+        span:first-child {
+            @apply rotate-225 translate-y-2.5;
+        }
+        span:nth-child(2) {
+            @apply opacity-0;
+        }
+        span:last-child {
+            @apply -rotate-225 -translate-y-2.25;
+        } 
+    }
+    .menu__summary__card {
+        @apply flex flex-col items-center py-10;
+        img {
+            @apply w-90;
+        }
+        .card__text {
+            @apply flex flex-col gap-4;
+            .price {
+                @apply flex items-end;
+                h3 {
+                    @apply font-[380] tracking-[2px]
+                }
+                .yellow, h1 {
+                    @apply text-primary font-normal;
+                }
+                h1 {
+                    @apply text-[2.5rem] ml-1.5 translate-y-2;
+                }
+            }
+            .food-name {
+                @apply flex flex-col gap-1;
+                h2, h1 {
+                    @apply text-[2rem] font-normal tracking-[0.1rem] p-0 leading-none;
+                }
+                h1 {
+                    @apply text-[2.75rem] font-[450]
+                }
+            }
+            p {
+                @apply text-sm font-[Segoe_UI] tracking-[1.5px] text-[#00000067] leading-4;
+            }
+            a {
+                @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary;
+            }
+        }
+    }
+    .promos {
+        .container {
+            @apply py-4;
+        }
+        .offer {
+            @apply flex flex-col text-center;
+            h1, h2, h3, p{
+                @apply font-normal leading-none;
+            }
+            h3 {
+                @apply text-[1.15rem];
+            }
+            h2 {
+                @apply tracking-[0.3rem];
+            }
+            h1 {
+                @apply text-[3.5rem] my-2;
+            }
+            p {
+                @apply text-[#00000067] font-[Segoe_UI] mt-6 tracking-[0.5px];
+            }
+        }    
+    }
+    .menu__content{
+        @apply py-4;
+        .menu__content__item {
+            @apply flex-col items-center gap-8 hidden;
+        }        
+        .menu__content__item.active {
+            @apply flex;
+        }
+        .menu__item {
+            @apply border-gray-200 border-2 max-w-4/5 flex flex-col items-center justify-center py-12;
+            a {
+                img {
+                    @apply w-48;
+                }
+            }
+            .menu__item__text {
+                @apply max-w-4/5;
+                .name-food {
+                    @apply text-lg;
+                }
+                h3 {
+                    @apply text-2xl text-primary my-2;
+                }
+                p {
+                    @apply text-sm font-light font-[Segoe_UI] text-gray-400 tracking-[0.5px];
+                }
+                .add-to-cart {
+                    @apply flex gap-2 items-center max-w-max bg-primary text-white text-sm font-[Segoe_UI] px-8 py-2 rounded-full mt-2;
+                }
+            }
+        }
+    }
+    .menu__tabs {
+        ul {
+            li {
+                @apply flex flex-col items-center gap-1.5 border-b-2 border-gray-100 py-2 w-24 transition-all ease-in-out duration-500;
+                img {
+                    @apply w-12;
+                }
+                span {
+                    @apply text-xl tracking-[2px];
+                }
+            }
+        }
+        .tab__nav__link.active {
+            @apply border-b-primary text-primary;
+        }
+    }
+    .order {
+        .order__step__card {
+            @apply flex flex-col bg-[#f7f6f9] items-center justify-center text-center max-w-7/8 gap-6 py-9;
+            img {
+                @apply w-95;
+            }
+        }
+        .info {
+            @apply flex flex-col items-center justify-center max-w-73.5 tracking-[1px] gap-1;
+            .title__tab {
+                @apply flex flex-col justify-center items-center gap-2;     
+                img {
+                    @apply w-16;
+                }
+                h2 {
+                    @apply text-3xl tracking-[2px];
+                }
+            }
+            p {
+                @apply font-[Segoe_UI] text-gray-400 leading-5;
+            }
+        }
+    }
