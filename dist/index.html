@@ -17,24 +17,25 @@
   <body class="font-[Oswald]">
     <header class="header bg-white fixed w-full top-0 left-0 p-4.5 z-9999" id="header">
       <div class="container">
-        <div class="header__wrapper flex items-center justify-between">
-          <div class="branding">
-            <h3 class="hidden">123456789</h3>
-            <img class="w-38" src="./img/logo-df.svg" alt="">
-            <h3 class="hidden">kamote</h3>
+        <div class="header__wrapper flex items-center justify-between 
+                    md:flex-col md:max-w-full">
+          <div class="branding md:max-w-full md:flex md:flex-row md:justify-between md:items-center md:w-full">
+            <h3><i class="fa-solid fa-phone"></i>+1 (800) 312-2121</h3>
+            <img class="w-38 md:w-50" src="./img/logo-df.svg" alt="">
+            <h3><i class="fa-solid fa-location-dot"></i>172 14th Street, Office 503, NY</h3>
           </div>
-          <div class="burgir bg-primary p-[0.6rem] rounded-lg flex flex-col justify-center gap-1.5 max-h-max cursor-pointer">
+          <div class="burgir bg-primary p-[0.6rem] rounded-lg flex flex-col justify-center gap-1.5 max-h-max cursor-pointer md:hidden">
             <span></span>
             <span></span>
             <span></span>
           </div>
 
-          <div class="header__nav bg-dark absolute text-white w-full h-screen top-23.5">
-            <ul class="flex flex-col items-center text-center h-full pt-32 gap-10">
-              <li><a href="./menu.html">MENU</a></li>
-              <li class="hidden"><a href="javascript:show__menu();" class="home__menu__btn">HOME<div class="arrows">
-                  <i class="fa-solid fa-angle-up arrow-up"></i>
-                  <i class="fa-solid fa-angle-down arrow-down"></i>
+          <div class="header__nav">
+            <ul class="flex flex-col items-center text-center h-full pt-32 gap-10 max-w-full
+                      md:flex-row md:justify-center md:pt-0">
+              <li class><a href="javascript:show__menu();" class="home__menu__btn">HOME
+                <div class="arrows hidden h-max md:inline">
+                  <i class="fa-solid fa-angle-down arrow-down text-xs"></i>
                 </div></a>
               
                 <section class="home__menu hidden">
@@ -72,7 +73,7 @@
                     </div>
                   </div>
                 </section>
-
+              <li><a href="./menu.html">MENU</a></li>
               </li>
               <li><a href="javascript:void(0);">ABOUT</a></li>
               <li><a href="javascript:void(0);">SERVICES</a></li>
@@ -84,16 +85,20 @@
       </div>
     </header>
 
-    <section class="banner pt-23.5 text-white" id="banner">
-      <div class="container bg-[url(/dist/img/banner.webp)] bg-cover bg-center">
-        <div class="banner__wrapper px-3 pt-10 pb-14">          
-          <img class="w-68" src="./img/banner-food.svg" alt="">
-          <div class="banner__text max-w-80">
-            <h2 class="text-5xl font-[450] tracking-[0.5rem]">DELIVERY</h2>
-            <p class="font-[Segoe_UI] mb-6">
+    <section class="banner pt-23.5 text-white max-w-full md:pt-0" id="banner">
+      <div class="container bg-[url(/dist/img/banner.webp)] bg-cover bg-center bg-no-repeat
+                  md:max-w-[95%] md:mx-auto md:bg-size-[80rem]">
+        <div class="banner__wrapper px-3 pt-10 pb-14
+                    md:pt-40  md:pl-10">          
+          <img class="w-72 md:w-80" src="./img/banner-food.svg" alt="">
+          <div class="banner__text max-w-80
+                      md:max-w-max md:translate-x-22 md:-translate-y-14 md:flex md:flex-col md:gap-4">
+            <h2 class="text-5xl font-[450] tracking-[0.5rem]
+                      md:text-6xl md:tracking-[0.75rem]">DELIVERY</h2>
+            <p class="font-[Segoe_UI] mb-6 md:max-w-72">
               We’re proud to have our burger’s history being as long as 25 years!
             </p>
-            <a href="javascript:void(0);" class="btn bg--primary font-[Segoe_UI] bg-primary px-8 py-3 rounded-full tracking-[4px] text-xs">ORDER NOW</a>
+            <a href="javascript:void(0);" class="btn bg--primary font-[Segoe_UI] bg-primary px-8 py-3 rounded-full tracking-[4px] text-xs md:max-w-max">ORDER NOW</a>
           </div>
         </div>
       </div>
@@ -101,7 +106,7 @@
 
     <section class="menu__summary">
       <div class="container">
-        <div class="menu__summary__wrapper">
+        <div class="menu__summary__wrapper md:grid md:grid-cols-3">
 
           <!-- summary cards -->
           <div class="menu__summary__card">
@@ -112,7 +117,7 @@
                 <h1>17</h1>
                 <h3 class="yellow">$</h3>
               </div>
-              <div class="food-name">
+              <div class="food-name flex-col">
                 <h2>BEEF CLASSIC<h2>
                 <h1>BURGERS</h1>
               </div>
@@ -130,7 +135,8 @@
                 <h3 class="yellow">$</h3>
               </div>
               <div class="food-name">
-                <h2>THE BEST PASTA<h2>
+                <h2>THE BEST <h2>
+                <h2>PASTA</h2>
               </div>
               <p>Our pasta with seafood is mixed perfectly with a glass of white wine.</p>
               <a href="javascript:void(0)" class="btn bg--primary menu">+</a>

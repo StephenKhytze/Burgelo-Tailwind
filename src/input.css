@@ -4,15 +4,28 @@
         --color-primary: #ffc139;
         --color-dark: #2b2b2b;
     }
-
     .header__nav {
-        @apply -right-full transition-all ease-in-out duration-500;
+        @apply -right-full transition-all ease-in-out duration-500 bg-dark absolute text-white w-full h-screen top-23.5
+        md:right-0 md:relative md:bg-white md:text-black md:h-max md:top-0 md:max-w-full;
     }
     .header__nav.open {
         @apply right-0;
     }
+    .header__nav ul li {
+        @apply md:flex md:items-center;
+    }
+    .header__nav ul li a {
+        @apply md:font-light md:text-sm md:tracking-[2px];
+    }
+    .header__wrapper .branding h3 {
+        @apply hidden flex items-center gap-6 text-sm font-[350] font-["Oswald"] md:block;
+    }
+    .header__wrapper .branding h3 i {
+        @apply text-primary text-2xl;
+    }
     .burgir {
-        @apply transition-all ease-in-out duration-500;
+        @apply transition-all ease-in-out duration-500
+        md:hidden;
         span {
             @apply w-6 h-[0.2rem] bg-white block transition-all ease-in-out duration-500;
         }
@@ -33,41 +46,60 @@
         } 
     }
     .menu__summary__card {
-        @apply flex flex-col items-center py-10;
-        img {
-            @apply w-90;
-        }
-        .card__text {
-            @apply flex flex-col gap-4;
-            .price {
-                @apply flex items-end;
-                h3 {
-                    @apply font-[380] tracking-[2px]
-                }
-                .yellow, h1 {
-                    @apply text-primary font-normal;
-                }
-                h1 {
-                    @apply text-[2.5rem] ml-1.5 translate-y-2;
-                }
-            }
-            .food-name {
-                @apply flex flex-col gap-1;
-                h2, h1 {
-                    @apply text-[2rem] font-normal tracking-[0.1rem] p-0 leading-none;
-                }
-                h1 {
-                    @apply text-[2.75rem] font-[450]
-                }
-            }
-            p {
-                @apply text-sm font-[Segoe_UI] tracking-[1.5px] text-[#00000067] leading-4;
-            }
-            a {
-                @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary;
-            }
-        }
+        @apply flex flex-col items-center py-10 justify-center;
     }
+    .menu__summary__card:nth-child(odd) {
+        @apply md:flex-col-reverse;
+    }
+    .menu__summary__card p {
+        @apply text-sm font-[Segoe_UI] tracking-[1.5px] text-[#00000067] leading-4 
+        md:max-w-120 md:mx-auto md:text-2xl md:leading-8;
+    }
+    .menu__summary__card img {    
+        @apply w-90
+        md:w-60;
+    }
+    .menu__summary__card:nth-child(2) img {
+        @apply md:w-50;
+    }
+    .menu__summary__card .container {
+        @apply max-w-360 px-1 py-2 mx-auto w-full;
+    }
+    .menu__summary__card .card__text {
+        @apply flex flex-col gap-4  
+        md:max-w-160;                
+    }
+    .menu__summary__card .card__text .price {
+        @apply flex items-end;
+    }
+    .menu__summary__card .card__text .price h3 {
+        @apply font-[380] tracking-[2px]
+        md:text-3xl md:tracking-[3px];
+    }
+    .menu__summary__card .card__text .price h1 {
+        @apply text-[2.5rem] ml-1.5 translate-y-2;
+    }
+    .menu__summary__card .card__text .price .yellow, .menu__summary__card .card__text .price h1 {
+        @apply text-primary font-normal
+        md:tracking-[3px];
+    }
+    .menu__summary__card .card__text a {
+        @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary;
+    }
+    .menu__summary__card .card__text .food-name {
+        @apply flex gap-1
+        md:flex-col md:justify-items-start;
+    }
+    .menu__summary__card .card__text .food-name h2, .menu__summary__card .card__text .food-name h1 {
+        @apply text-[2rem] font-normal tracking-[0.1rem] p-0 leading-none
+        md:text-[2.75rem] md:max-w-48 md:leading-12;
+    }
+    .menu__summary__card .card__text .food-name h1 {
+        @apply text-[2.75rem] font-[450]
+        md:text-[3.5rem] tracking-[4px];
+    }
+    
+    
     .promos {
         .container {
             @apply py-4;
