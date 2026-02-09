@@ -23,8 +23,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
@@ -249,6 +247,9 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .-mt-14 {
+    margin-top: calc(var(--spacing) * -14);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -414,8 +415,8 @@
   .py-3\.5 {
     padding-block: calc(var(--spacing) * 3.5);
   }
-  .py-14 {
-    padding-block: calc(var(--spacing) * 14);
+  .pt-14 {
+    padding-top: calc(var(--spacing) * 14);
   }
   .pt-23\.5 {
     padding-top: calc(var(--spacing) * 23.5);
@@ -532,6 +533,11 @@
       height: calc(var(--spacing) * 165);
     }
   }
+  .md\:h-200 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 200);
+    }
+  }
   .md\:w-50 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 50);
@@ -629,19 +635,19 @@
       background-size: 80rem;
     }
   }
-  .md\:py-48 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 48);
-    }
-  }
   .md\:pt-0 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 0);
     }
   }
-  .md\:pt-20 {
+  .md\:pt-28 {
     @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 20);
+      padding-top: calc(var(--spacing) * 28);
+    }
+  }
+  .md\:pt-40 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 40);
     }
   }
   .md\:pl-12 {
@@ -800,10 +806,14 @@
   align-items: center;
   justify-content: center;
   padding-block: calc(var(--spacing) * 10);
-}
-.menu__summary__card:nth-child(odd) {
   @media (width >= 48rem) {
-    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+.menu__summary__card img {
+  width: calc(var(--spacing) * 90);
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 50);
   }
 }
 .menu__summary__card p {
@@ -828,15 +838,9 @@
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
 }
-.menu__summary__card img {
-  width: calc(var(--spacing) * 90);
-  @media (width >= 48rem) {
-    width: calc(var(--spacing) * 60);
-  }
-}
 .menu__summary__card:nth-child(2) img {
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 50);
+    width: calc(var(--spacing) * 40);
   }
 }
 .menu__summary__card .container {
@@ -853,6 +857,9 @@
   @media (width >= 48rem) {
     max-width: calc(var(--spacing) * 160);
   }
+  @media (width >= 48rem) {
+    gap: calc(var(--spacing) * 6);
+  }
 }
 .menu__summary__card .card__text .price {
   margin-bottom: calc(var(--spacing) * 2);
@@ -865,8 +872,8 @@
   --tw-tracking: 2px;
   letter-spacing: 2px;
   @media (width >= 48rem) {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   @media (width >= 48rem) {
     --tw-tracking: 3px;
@@ -886,6 +893,12 @@
   @media (width >= 48rem) {
     --tw-tracking: 3px;
     letter-spacing: 3px;
+  }
+}
+.menu__summary__card .card__text .price .yellow {
+  @media (width >= 48rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 }
 .menu__summary__card .card__text a {
@@ -936,6 +949,11 @@
   @media (width >= 48rem) {
     --tw-tracking: 4px;
     letter-spacing: 4px;
+  }
+}
+.menu__summary__card:nth-child(odd) {
+  @media (width >= 48rem) {
+    flex-direction: column-reverse;
   }
 }
 .promos {
