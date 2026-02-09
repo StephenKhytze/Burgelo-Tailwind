@@ -98,7 +98,7 @@
         @apply text-[3rem] 
         md:tracking-[4px] md:leading-16;
     }
-    
+
     
     .promos {
         .container {
@@ -113,16 +113,19 @@
                 @apply text-[1.15rem];
             }
             h2 {
-                @apply tracking-[0.3rem];
+                @apply tracking-[0.3rem]
+                md:tracking-[0.4rem];
             }
             h1 {
-                @apply text-[3.5rem] my-2;
+                @apply text-[3.5rem] my-2
+                md:text-[4.25rem] md:my-3;
             }
             p {
                 @apply text-[#00000067] font-[Segoe_UI] mt-6 tracking-[0.5px];
             }
         }    
     }
+
     .menu__content{
         @apply py-4;
         .menu__content__item {

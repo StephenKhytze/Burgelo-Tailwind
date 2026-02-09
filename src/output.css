@@ -260,14 +260,20 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
   .table {
     display: table;
   }
-  .h-90 {
-    height: calc(var(--spacing) * 90);
+  .h-150 {
+    height: calc(var(--spacing) * 150);
+  }
+  .h-165 {
+    height: calc(var(--spacing) * 165);
   }
   .h-180 {
     height: calc(var(--spacing) * 180);
@@ -340,6 +346,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -523,6 +532,31 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .md\:top-25 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 25);
+    }
+  }
+  .md\:top-30 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 30);
+    }
+  }
+  .md\:bottom-20 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:bottom-25 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 25);
+    }
+  }
+  .md\:bottom-30 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 30);
+    }
+  }
   .md\:mx-auto {
     @media (width >= 48rem) {
       margin-inline: auto;
@@ -589,10 +623,21 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .md\:-translate-y-10 {
+    @media (width >= 48rem) {
+      --tw-translate-y: calc(var(--spacing) * -10);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
   .md\:-translate-y-14 {
     @media (width >= 48rem) {
       --tw-translate-y: calc(var(--spacing) * -14);
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-3 {
@@ -659,6 +704,11 @@
     @media (width >= 48rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  .md\:text-\[2\.5rem\] {
+    @media (width >= 48rem) {
+      font-size: 2.5rem;
     }
   }
   .md\:tracking-\[0\.75rem\] {
@@ -959,10 +1009,20 @@
     h2 {
       --tw-tracking: 0.3rem;
       letter-spacing: 0.3rem;
+      @media (width >= 48rem) {
+        --tw-tracking: 0.4rem;
+        letter-spacing: 0.4rem;
+      }
     }
     h1 {
       margin-block: calc(var(--spacing) * 2);
       font-size: 3.5rem;
+      @media (width >= 48rem) {
+        margin-block: calc(var(--spacing) * 3);
+      }
+      @media (width >= 48rem) {
+        font-size: 4.25rem;
+      }
     }
     p {
       margin-top: calc(var(--spacing) * 6);
