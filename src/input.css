@@ -176,24 +176,31 @@
     }
     .order {
         .order__step__card {
-            @apply flex flex-col bg-[#f7f6f9] items-center justify-center text-center max-w-7/8 gap-6 py-9;
+            @apply flex flex-col bg-[#f7f6f9] items-center justify-center text-center gap-6 py-9
+                    md:text-start;
             img {
                 @apply w-95;
             }
         }
         .info {
-            @apply flex flex-col items-center justify-center max-w-73.5 tracking-[1px] gap-1;
+            @apply flex flex-col items-center justify-center tracking-[1px] gap-4
+                    md:items-start md:px-3 md:gap-2;
             .title__tab {
-                @apply flex flex-col justify-center items-center gap-2;     
+                @apply flex flex-col justify-center items-center gap-2
+                        md:flex-row-reverse md:items-start md:gap-4 md:justify-end;
                 img {
-                    @apply w-16;
+                    @apply w-16 md:w-12;
                 }
                 h2 {
-                    @apply text-3xl tracking-[2px];
+                    @apply text-2xl font-["Oswald"] tracking-[3px] font-light 
+                            md:max-w-30 md:text-[1.75rem] md:font-[350];
                 }
             }
             p {
-                @apply font-[Segoe_UI] text-gray-400 leading-5;
+                @apply font-[Montserrat] text-black leading-7 tracking-[1.5px] font-extralight text-sm;
             }
         }
+    }
+    .order .order__step__card:nth-child(even) {
+        @apply md:flex-col-reverse;
     }
