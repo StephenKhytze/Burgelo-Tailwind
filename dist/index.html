@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/dist/img/favicon.png" />
     <link rel="stylesheet" href="../src/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alfa+Slab+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
   </head>
@@ -87,7 +88,7 @@
 
     <section class="banner pt-23.5 text-white max-w-full md:pt-28" id="banner">
       <div class="container">
-        <div class="banner__wrapper bg-[url(/dist/img/banner.webp)] bg-cover bg-center bg-no-repeat max-w-[95%] mx-auto pt-14 pl-2
+        <div class="banner__wrapper bg-[url(/dist/img/banner.webp)] bg-cover bg-center bg-no-repeat max-w-[95%] mx-auto h-[70vh] pt-14 pl-2
                     md:mx-auto md:bg-size-[80rem] md:pt-40 md:h-200 md:pl-12">          
           <img class="w-72 md:w-80" src="./img/banner-food.svg" alt="">
           <div class="banner__text max-w-80 pl-2
@@ -103,7 +104,7 @@
       </div>
     </section>
 
-    <section class="menu__summary -mt-14">
+    <section class="menu__summary md:-mt-14">
       <div class="container">
         <div class="menu__summary__wrapper md:grid md:grid-cols-3 max-w-[95%] mx-auto">
 
@@ -205,7 +206,7 @@
         <div class="menu__wrapper">
 
           <div class="menu__tabs w-7/8 mx-auto my-6">
-            <ul class="flex justify-between">
+            <ul class="flex justify-between md:max-w-[50vw] md:mx-auto">
               <li id="tab-1" class="tab__nav__link active"><img src="./img/sub-burger.png" alt=""><span>BURGERS</span></li>
               <li id="tab-2" class="tab__nav__link"><img src="./img/sub-pasta.png" alt=""><span>PASTA</span></li>
               <li id="tab-3" class="tab__nav__link"><img src="./img/sub-drinks.png" alt=""><span>DRINKS</span></li>
@@ -213,7 +214,7 @@
           </div>
           
           <!-- content of tabs -->
-          <div class="menu__content transition-all ease-in-out duration-100">
+          <div class="menu__content relative transition-all ease-in-out duration-100">
 
             <!-- set for burgers -->
             <div id="tab-1-content" class="menu__content__item active">
@@ -247,9 +248,14 @@
                 </div>
               </div>
             </div>
-
+            <div id="tab-1-content-nav" class="slider__nav__container active">
+                <div id="tab-1-slider-nav" class="tns-nav">
+                    <div class="tns-nav-buttons" data-nav="0" aria-controls="tns1"><span></span></div>
+                    <div class="tns-nav-buttons" data-nav="1" aria-controls="tns1"><span></span></div>
+                </div>
+            </div>
             <!-- set for pasta -->
-            <div id="tab-2-content" class="menu__content__item">
+            <div id="tab-2-content" class="menu__content__item md:ml-8 md:w-full">
               <div class="menu__item pasta" id="pasta-1">
                 <a href="javascript:void(0)" class="img-food"><img src="./img/pasta2_01-300x300.webp" alt=""></a>
                 <div class="menu__item__text">
@@ -303,7 +309,12 @@
                 </div>
               </div>
             </div>
-
+            <div id="tab-3-content-nav" class="slider__nav__container">
+              <div id="tab-3-slider-nav" class="tns-nav">
+                  <div class="tns-nav-buttons" data-nav="0" aria-controls="tns1"><span></span></div>
+                  <div class="tns-nav-buttons" data-nav="1" aria-controls="tns1"><span></span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -360,5 +371,45 @@
     </a>
 
     <script src="./js/burgir.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="module">
+        // import {tns} from './src/tiny-slider.js';
+
+        var tab1_slider = tns({
+          container: '#tab-1-content',
+          items: 2,
+          slideBy: 'page',
+          autoplay: false,
+          loop: false,
+          slideBy: 2,
+          controls: false,
+          navContainer: '#tab-1-slider-nav',
+          navAsThumbnails: false,
+          disable: true,
+          responsive: {
+            768: {
+              disable: false,
+            }
+          }
+        });
+        var tab3_slider = tns({
+          container: '#tab-3-content',
+          items: 2,
+          slideBy: 'page',
+          autoplay: false,
+          loop: false,
+          slideBy: 2,
+          controls: false,
+          navContainer: '#tab-3-slider-nav',
+          navAsThumbnails: false,
+          disable: true,
+          responsive: {
+            768: {
+              disable: false,
+            }
+          }
+        });
+    </script>
+
   </body>
 </html>
