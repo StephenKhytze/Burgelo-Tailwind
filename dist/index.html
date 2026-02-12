@@ -20,9 +20,10 @@
       <div class="container">
         <div class="header__wrapper flex items-center justify-between 
                     md:flex-col md:max-w-full">
-          <div class="branding md:max-w-full md:flex md:flex-row md:justify-between md:items-center md:w-full">
-            <h3><i class="fa-solid fa-phone"></i>+1 (800) 312-2121</h3>
-            <img class="w-38 md:w-50" src="./img/logo-df.svg" alt="">
+          <div class="branding md:max-w-full md:flex md:flex-row md:justify-between md:items-center md:w-full
+                      lg:pb-4">
+            <h3 class="transition-all ease-in-out duration-350"><i class="fa-solid fa-phone"></i>+1 (800) 312-2121</h3>
+            <img class="w-38 md:w-50 lg:w-40 lg:translate-x-10" src="./img/logo-df.svg" alt="">
             <h3><i class="fa-solid fa-location-dot"></i>172 14th Street, Office 503, NY</h3>
           </div>
           <div class="burgir bg-primary p-[0.6rem] rounded-lg flex flex-col justify-center gap-1.5 max-h-max cursor-pointer md:hidden">
@@ -33,7 +34,8 @@
 
           <div class="header__nav">
             <ul class="flex flex-col items-center text-center h-full pt-32 gap-10 max-w-full
-                      md:flex-row md:justify-center md:pt-0">
+                      md:flex-row md:justify-center md:pt-0
+                      lg:gap-6">
               <li class><a href="javascript:show__menu();" class="home__menu__btn">HOME
                 <div class="arrows hidden h-max md:inline">
                   <i class="fa-solid fa-angle-down arrow-down text-xs"></i>
@@ -86,19 +88,22 @@
       </div>
     </header>
 
-    <section class="banner pt-23.5 text-white max-w-full md:pt-28" id="banner">
+    <section class="banner pt-23.5 text-white max-w-full md:pt-28 lg:pt-36" id="banner">
       <div class="container">
         <div class="banner__wrapper bg-[url(/dist/img/banner.webp)] bg-cover bg-center bg-no-repeat max-w-[95%] mx-auto h-[70vh] pt-14 pl-2
-                    md:mx-auto md:bg-size-[80rem] md:pt-40 md:h-200 md:pl-12">          
-          <img class="w-72 md:w-80" src="./img/banner-food.svg" alt="">
+                    md:mx-auto md:bg-size-[80rem] md:pt-40 md:h-200 md:pl-12
+                    lg:max-w-full lg:bg-cover lg:h-175 lg:pt-28 lg:pl-34">          
+          <img class="w-72 md:w-80 lg:w-76" src="./img/banner-food.svg" alt="">
           <div class="banner__text max-w-80 pl-2
-                      md:max-w-max md:translate-x-18 md:-translate-y-14 md:flex md:flex-col md:gap-4">
+                      md:max-w-max md:translate-x-18 md:-translate-y-14 md:flex md:flex-col md:gap-4
+                      lg:translate-x-19">
             <h2 class="text-5xl font-[450] tracking-[0.5rem]
-                      md:text-6xl md:tracking-[0.75rem]">DELIVERY</h2>
+                      md:text-6xl md:tracking-[0.75rem]
+                      lg:text-[4rem]">DELIVERY</h2>
             <p class="font-[Segoe_UI] mb-6 md:max-w-72">
               We’re proud to have our burger’s history being as long as 25 years!
             </p>
-            <a href="javascript:void(0);" class="btn bg--primary font-[Segoe_UI] font-bold bg-primary px-8 py-3.5 rounded-full tracking-[4px] text-xs md:max-w-max">ORDER NOW</a>
+            <a href="javascript:void(0);" class="btn bg--primary font-[Segoe_UI] font-bold bg-primary px-8 py-3.5 rounded-full tracking-[4px] text-xs transition-all ease-in-out duration-350 md:max-w-max">ORDER NOW</a>
           </div>
         </div>
       </div>
@@ -389,6 +394,9 @@
           responsive: {
             768: {
               disable: false,
+            },
+            900: {
+              disable: true,
             }
           }
         });
@@ -406,6 +414,9 @@
           responsive: {
             768: {
               disable: false,
+            },
+            900: {
+              disable: true,
             }
           }
         });
