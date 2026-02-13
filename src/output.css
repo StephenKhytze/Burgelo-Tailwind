@@ -1308,6 +1308,9 @@
   @media (width >= 48rem) {
     max-width: 95%;
   }
+  @media (width >= 64rem) {
+    max-width: 100%;
+  }
   .menu__content__item {
     display: none;
     flex-direction: column;
@@ -1319,16 +1322,21 @@
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 4);
     }
+    @media (width >= 64rem) {
+      justify-items: start;
+    }
   }
   .menu__content__item.active {
     display: flex;
   }
   .menu__item {
+    position: relative;
     display: flex;
     max-width: calc(4/5 * 100%);
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border-style: var(--tw-border-style);
     border-width: 2px;
     border-color: var(--color-gray-200);
@@ -1339,16 +1347,73 @@
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 10);
     }
+    @media (width >= 64rem) {
+      max-width: 25%;
+    }
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 15);
+    }
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 14);
+    }
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 38);
+    }
     a {
       img {
         width: calc(var(--spacing) * 48);
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+        --tw-duration: 450ms;
+        transition-duration: 450ms;
+        --tw-ease: var(--ease-in-out);
+        transition-timing-function: var(--ease-in-out);
       }
     }
     .menu__item__text {
       max-width: calc(4/5 * 100%);
+      transition-property: all;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+      --tw-duration: 350ms;
+      transition-duration: 350ms;
+      --tw-ease: var(--ease-in-out);
+      transition-timing-function: var(--ease-in-out);
+      @media (width >= 64rem) {
+        position: absolute;
+      }
+      @media (width >= 64rem) {
+        bottom: calc(var(--spacing) * -14);
+      }
+      @media (width >= 64rem) {
+        left: 50%;
+      }
+      @media (width >= 64rem) {
+        width: 80%;
+      }
+      @media (width >= 64rem) {
+        max-width: 100%;
+      }
+      @media (width >= 64rem) {
+        --tw-translate-x: -50%;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
       .name-food {
         font-size: var(--text-lg);
         line-height: var(--tw-leading, var(--text-lg--line-height));
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+        --tw-duration: 350ms;
+        transition-duration: 350ms;
+        --tw-ease: var(--ease-in-out);
+        transition-timing-function: var(--ease-in-out);
+      }
+      .name-food:hover {
+        @media (width >= 64rem) {
+          color: var(--color-primary);
+        }
       }
       h3 {
         margin-block: calc(var(--spacing) * 2);
@@ -1365,6 +1430,21 @@
         --tw-tracking: 0.5px;
         letter-spacing: 0.5px;
         color: var(--color-gray-400);
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+        --tw-duration: 350ms;
+        transition-duration: 350ms;
+        --tw-ease: var(--ease-in-out);
+        transition-timing-function: var(--ease-in-out);
+        @media (width >= 64rem) {
+          --tw-translate-y: calc(var(--spacing) * 12);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+        @media (width >= 64rem) {
+          font-size: var(--text-xs);
+          line-height: var(--tw-leading, var(--text-xs--line-height));
+        }
       }
       .add-to-cart {
         margin-top: calc(var(--spacing) * 2);
@@ -1380,6 +1460,57 @@
         font-size: var(--text-sm);
         line-height: var(--tw-leading, var(--text-sm--line-height));
         color: var(--color-white);
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+        --tw-duration: 350ms;
+        transition-duration: 350ms;
+        --tw-ease: var(--ease-in-out);
+        transition-timing-function: var(--ease-in-out);
+        @media (width >= 64rem) {
+          margin-top: calc(var(--spacing) * 4);
+        }
+        @media (width >= 64rem) {
+          --tw-translate-y: calc(var(--spacing) * 12);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+        @media (width >= 64rem) {
+          padding-inline: calc(var(--spacing) * 6);
+        }
+        @media (width >= 64rem) {
+          --tw-tracking: 2px;
+          letter-spacing: 2px;
+        }
+      }
+      .add-to-cart:hover {
+        @media (width >= 64rem) {
+          background-color: var(--color-black);
+        }
+        @media (width >= 64rem) {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+  .menu__item:hover {
+    img {
+      opacity: 50%;
+    }
+    .menu__item__text {
+      @media (width >= 64rem) {
+        bottom: calc(var(--spacing) * 6);
+      }
+      p {
+        @media (width >= 64rem) {
+          --tw-translate-y: calc(var(--spacing) * 0);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+      }
+      .add-to-cart {
+        @media (width >= 64rem) {
+          --tw-translate-y: calc(var(--spacing) * 0);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
       }
     }
   }
@@ -1445,6 +1576,19 @@
         letter-spacing: 2px;
       }
     }
+  }
+  .tab__nav__link {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 350ms;
+    transition-duration: 350ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  .tab__nav__link:hover {
+    cursor: pointer;
+    color: var(--color-primary);
   }
   .tab__nav__link.active {
     border-bottom-color: var(--color-primary);

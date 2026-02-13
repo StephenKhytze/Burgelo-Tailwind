@@ -167,35 +167,61 @@
 
     .menu__content{
         @apply py-4
-                md:max-w-[95%] md:mx-auto;
+                md:max-w-[95%] md:mx-auto
+                lg:max-w-full;
         .menu__content__item {
             @apply flex-col items-center gap-8 hidden
-                    md:flex-row md:gap-4;
+                    md:flex-row md:gap-4
+                    lg:justify-items-start;
         }        
         .menu__content__item.active {
             @apply flex;
         }
         .menu__item {
-            @apply border-gray-200 border-2 max-w-4/5 flex flex-col items-center justify-center py-12
-                    md:max-w-[45%] md:px-10;
+            @apply relative border-gray-200 border-2 max-w-4/5 flex flex-col items-center justify-center py-12 overflow-hidden
+                    md:max-w-[45%] md:px-10
+                    lg:max-w-[25%] lg:pt-14 lg:pb-38 lg:px-15;
             a {
                 img {
-                    @apply w-48;
+                    @apply w-48 transition-all ease-in-out duration-450;
                 }
             }
             .menu__item__text {
-                @apply max-w-4/5;
+                @apply max-w-4/5 transition-all ease-in-out duration-350
+                        lg:max-w-full lg:absolute lg:left-[50%] lg:translate-x-[-50%] lg:w-[80%] lg:-bottom-14;
                 .name-food {
-                    @apply text-lg;
+                    @apply text-lg transition-all ease-in-out duration-350;
+                }            
+                .name-food:hover {
+                    @apply lg:text-primary;
                 }
                 h3 {
                     @apply text-2xl text-primary my-2;
                 }
                 p {
-                    @apply text-sm font-light font-[Segoe_UI] text-gray-400 tracking-[0.5px];
+                    @apply text-sm font-light font-[Segoe_UI] text-gray-400 tracking-[0.5px] transition-all ease-in-out duration-350
+                            lg:text-xs lg:translate-y-12;
                 }
                 .add-to-cart {
-                    @apply flex gap-2 items-center max-w-max bg-primary text-white text-sm font-[Segoe_UI] px-8 py-2 rounded-full mt-2;
+                    @apply flex gap-2 items-center max-w-max bg-primary text-white text-sm font-[Segoe_UI] px-8 py-2 rounded-full mt-2 transition-all ease-in-out duration-350
+                            lg:mt-4 lg:tracking-[2px] lg:px-6 lg:translate-y-12 ;
+                }
+                .add-to-cart:hover {
+                    @apply lg:bg-black lg:text-primary;
+                }
+            }
+        }
+        .menu__item:hover {
+            img {
+                @apply opacity-50;
+            }
+            .menu__item__text {
+                @apply lg:bottom-6;
+                p {
+                    @apply lg:translate-y-0
+                }
+                .add-to-cart {
+                    @apply lg:translate-y-0
                 }
             }
         }
@@ -226,6 +252,12 @@
                     @apply text-xl tracking-[2px];
                 }
             }
+        }
+        .tab__nav__link {
+            @apply transition-all ease-in-out duration-350;
+        }
+        .tab__nav__link:hover {
+            @apply text-primary cursor-pointer;
         }
         .tab__nav__link.active {
             @apply border-b-primary text-primary;
