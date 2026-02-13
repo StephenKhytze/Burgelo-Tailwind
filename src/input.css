@@ -62,6 +62,14 @@
         } 
     }
 
+    .home__menu .items img {
+        @apply transition-all ease-in-out duration-350;
+    }
+    .home__menu .items img:hover {
+        @apply scale-[105%] shadow-lg cursor-pointer;
+    }
+
+
     .banner .banner__text a:hover {
         @apply lg:text-primary lg:bg-white;
     }

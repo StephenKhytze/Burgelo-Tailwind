@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alfa+Slab+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
   </head>
   <body class="font-[Oswald]">
-    <header class="header bg-white fixed w-full top-0 left-0 p-4.5 z-9999" id="header">
+    <header class="header bg-white shadow-md fixed w-full top-0 left-0 p-4.5 z-9999" id="header">
       <div class="container">
         <div class="header__wrapper flex items-center justify-between 
                     md:flex-col md:max-w-full">
@@ -41,9 +41,9 @@
                   <i class="fa-solid fa-angle-down arrow-down text-xs"></i>
                 </div></a>
               
-                <section class="home__menu hidden">
-                  <div class="container home__menu__wrapper">
-                    <div class="items">
+                <section class="home__menu hidden z-999 fixed top-33 left-[50%] translate-x-[-50%] bg-white w-332 py-8 shadow-md lg:block">
+                  <div class="container home__menu__wrapper flex flex-col gap-8">
+                    <div class="items flex flex-wrap justify-center gap-12">
                       <img src="./img/Frame-1.png" alt="">
                       <img src="./img/Frame-2.png" alt="">
                       <img src="./img/Frame-3.png" alt="">
@@ -52,8 +52,8 @@
                       <img src="./img/Frame-6.png" alt="">
                     </div>
             
-                    <div class="pop__promos">
-                      <div class="pop__promos__item">
+                    <div class="pop__promos grid grid-cols-2 w-full px-12 gap-8">
+                      <div class="pop__promos__item bg-primary flex">
                         <div class="promo__text">
                           <h3>SPECIAL OFFER</h3>
                           <h1>BUY 2 GET 3</h1>
@@ -64,7 +64,7 @@
                         </div>
                       </div>
             
-                      <div class="pop__promos__item">
+                      <div class="pop__promos__item bg-[#333333]">
                         <div class="promo__text">
                           <h1>GET 25% OFF</h1>
                           <h3>ON YOUR ORDER</h3>
