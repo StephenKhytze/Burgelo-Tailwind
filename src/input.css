@@ -234,9 +234,32 @@
     .order {
         .order__step__card {
             @apply flex flex-col bg-[#f7f6f9] items-center justify-center text-center gap-6 py-9
-                    md:text-start;
+                    md:text-start
+                    lg:items-end lg:justify-start lg:py-0 lg:pb-9 lg:gap-0;
             img {
                 @apply w-95;
+            }
+        }
+        .order__step__card:first-child {
+            @apply lg:gap-4;
+            > img {
+                @apply lg:pr-14 lg:w-105 lg:mt-8;
+            }
+            .info {
+                @apply lg:pl-24;
+            }
+        }
+        .order__step__card:nth-child(2) {
+            .info {
+                @apply lg:pl-22;
+            }
+            .title__tab {
+                @apply lg:gap-1;
+            }
+        }
+        .order__step__card:nth-child(3) {
+            .info {
+                @apply lg:pl-18;
             }
         }
         .info {
@@ -244,19 +267,24 @@
                     md:items-start md:px-3 md:gap-2;
             .title__tab {
                 @apply flex flex-col justify-center items-center gap-2
-                        md:flex-row-reverse md:items-start md:gap-4 md:justify-end;
+                        md:flex-row-reverse md:items-start md:gap-4 md:justify-end
+                        lg:mt-2 lg:items-center;
                 img {
-                    @apply w-16 md:w-12;
+                    @apply w-16 md:w-12 lg:w-14;
                 }
                 h2 {
                     @apply text-2xl font-["Oswald"] tracking-[3px] font-light 
-                            md:max-w-30 md:text-[1.75rem] md:font-[350];
+                            md:max-w-30 md:text-[1.75rem] md:font-[350]
+                            lg:max-w-full lg:font-normal lg:text-[2.2rem];
                 }
             }
             p {
-                @apply font-[Montserrat] text-black leading-7 tracking-[1.5px] font-extralight text-sm;
+                @apply font-[Montserrat] text-black leading-7 tracking-[1.5px] font-extralight text-sm lg:tracking-[1px];
             }
         }
+    }
+    .order .order__step__card:last-child img {
+        @apply lg:w-90;
     }
     .order .order__step__card:nth-child(even) {
         @apply md:flex-col-reverse;
