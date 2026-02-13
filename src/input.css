@@ -109,7 +109,10 @@
         @apply md:text-xl;
     }
     .menu__summary__card .card__text a {
-        @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary;
+        @apply flex w-11 h-11 items-center justify-center text-white text-2xl rounded-full bg-primary transition-all ease-in-out duration-350;
+    }
+    .menu__summary__card .card__text a:hover {
+        @apply lg:bg-black lg:text-primary;
     }
     .menu__summary__card .card__text .food-name {
         @apply flex gap-1

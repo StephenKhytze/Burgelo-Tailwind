@@ -171,9 +171,11 @@
 
     <section class="promos">
       <div class="container">
-        <div class="promos__wrapper flex flex-col gap-2 max-w-[95%] mx-auto">
+        <div class="promos__wrapper relative flex flex-col gap-2 max-w-[95%] mx-auto
+                    lg:flex-row lg:max-w-full">
 
-          <div class="offer bg-[url(/dist/img/offers1.png)] bg-cover flex items-center justify-center h-150" id="offer-1">
+          <div class="offer bg-[url(/dist/img/offers1.png)] bg-cover flex items-center justify-center h-150
+                      lg:absolute lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:w-[48.5%] lg:h-145" id="offer-1">
             <div class="text">
               <h2 class="text-[2rem] md:text-[2.5rem]">SPECIAL OFFER</h2>
               <h1>BUY 2 GET 3</h1>
@@ -182,11 +184,12 @@
           </div>
 
           <div class="offer__wrapper grid grid-cols-1 gap-2
-                      md:grid-cols-2">
+                      md:grid-cols-2 lg:flex lg:justify-between lg:w-full">
             <div class="offer bg-[url(/dist/img/offers2.png)] relative bg-cover flex flex-col items-center h-screen
-                        md:h-165" id="offer-2">
+                        md:h-165 lg:w-[23.5%] lg:h-145" id="offer-2">
               <div class="text absolute bottom-45
-                          md:bottom-25">
+                          md:bottom-25
+                          lg:bottom-15">
                 <img class="w-44" src="./img/happy.png" alt="">
                 <div class="inner__text flex flex-col gap-2 -translate-y-5">
                   <h2 class="text-[2.5rem]">HOURS</h2>
@@ -195,9 +198,10 @@
               </div>
             </div>
             <div class="offer bg-[url(/dist/img/offers3.png)] relative bg-cover bg-center flex flex-col items-center h-screen
-                        md:h-165" id="offer-3">
+                        md:h-165 lg:w-[23.5%] lg:h-145" id="offer-3">
               <div class="text relative top-44.5
-                          md:top-25">
+                          md:top-25
+                          lg:top-10">
                 <img class="w-60" src="./img/15-off.png" alt="">
                 <h2 class="text-[1.75rem] translate-x-4 -translate-y-4">FIRST ORDER</h2>
               </div>
