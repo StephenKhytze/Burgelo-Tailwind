@@ -38,6 +38,7 @@
     .header__wrapper .branding h3:first-child:hover {
         @apply lg:text-primary lg:cursor-pointer;
     }
+
     .burgir {
         @apply transition-all ease-in-out duration-500
         md:hidden;
@@ -60,40 +61,45 @@
             @apply -rotate-225 -translate-y-2.25;
         } 
     }
+
     .banner .banner__text a:hover {
         @apply lg:text-primary lg:bg-white;
     }
+
     .menu__summary__card {
         @apply flex flex-col items-center py-10 justify-center max-w-[95%] mx-auto
-                md:items-start;
+                md:items-start md:justify-start
+                lg:max-w-full;
     }
     .menu__summary__card img {    
         @apply w-90
-        md:w-50;
+        md:w-50
+        lg:w-full;
     }
     .menu__summary__card p {
         @apply text-sm font-[Montserrat] font-light tracking-[1.5px] text-[#333333] leading-7 
-        md:max-w-120 md:mx-auto md:text-sm;
+        md:max-w-120 md:mx-auto md:text-sm
+        lg:tracking-[1px] lg:font-[350];
     }
     .menu__summary__card:nth-child(2) img {
-        @apply md:w-40;
-    }
-    .menu__summary__card .container {
-        @apply max-w-360 px-1 py-2 mx-auto w-full;
+        @apply md:w-40 lg:w-75;
     }
     .menu__summary__card .card__text {
         @apply flex flex-col gap-4  
-        md:max-w-160 md:gap-6;                
+        md:max-w-160 md:gap-6
+        lg:max-w-full lg:gap-4;                
     }
     .menu__summary__card .card__text .price {
         @apply flex items-end mb-2;
     }
     .menu__summary__card .card__text .price h3 {
         @apply font-[380] tracking-[2px]
-        md:text-xl md:tracking-[3px];
+        md:text-xl md:tracking-[3px]
+        lg:text-lg lg:tracking-[2px];
     }
     .menu__summary__card .card__text .price h1 {
-        @apply text-[2.5rem] ml-1.5 translate-y-2;
+        @apply text-[2.5rem] ml-1.5 translate-y-2
+                lg:text-[2.25rem] lg:translate-y-1.5;
     }
     .menu__summary__card .card__text .price .yellow, .menu__summary__card .card__text .price h1 {
         @apply text-primary font-normal
@@ -107,20 +113,29 @@
     }
     .menu__summary__card .card__text .food-name {
         @apply flex gap-1
-        md:flex-col md:justify-items-start;
+        md:flex-col md:justify-items-start
+        lg:gap-2;
     }
     .menu__summary__card .card__text .food-name h2, .menu__summary__card .card__text .food-name h1 {
         @apply text-[2rem] font-[375] tracking-[0.25rem] p-0 leading-none
-        md:max-w-54 md:leading-8;
+        md:max-w-54 md:leading-8
+        lg:max-w-full lg:text-[2.2rem];
     }
     .menu__summary__card .card__text .food-name h1 {
         @apply text-[3rem] 
-        md:tracking-[4px] md:leading-16;
+        md:tracking-[4px] md:leading-16
+        lg:text-[4.2rem];
     }
     .menu__summary__card:nth-child(odd) {
         @apply md:flex-col-reverse;
     }
-    
+    .menu__summary__card:nth-child(2) .card__text .food-name{
+        @apply lg:flex-row lg:gap-1.5;
+    }
+    .menu__summary__card:nth-child(2) .card__text, .menu__summary__card:last-child .card__text {
+        @apply lg:pl-12;
+    }
+
     .promos {
         .container {
             @apply py-4;
