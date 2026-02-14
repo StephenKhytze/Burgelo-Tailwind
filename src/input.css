@@ -21,11 +21,23 @@
         @apply lg:hidden;
     }
     .header__nav ul li a {
-        @apply md:font-light md:text-sm md:tracking-[2px]
+        @apply transition-all ease-in-out duration-150 md:font-light md:text-sm md:tracking-[2px]
                 lg:font-normal lg:text-[0.8rem] lg:tracking-[1px];
     }
     .header__nav ul li a:hover {
         @apply lg:text-primary;
+    }
+    .header__nav ul li a i{
+        @apply transition-all ease-in-out duration-150;
+    }
+    .header__nav ul li:first-child:hover a i{
+        @apply rotate-180;
+    }
+    .header__nav ul li:first-child:hover .home__menu{
+        @apply lg:block;
+    }
+    .header__nav ul li:first-child:hover .home__menu:hover {
+        @apply lg:block;
     }
     .header__wrapper .branding h3 {
         @apply hidden items-center gap-6 text-sm font-[350] font-["Oswald"] 
@@ -63,12 +75,20 @@
     }
 
     .home__menu .items img {
-        @apply transition-all ease-in-out duration-350;
+        @apply w-102.5 transition-all ease-in-out duration-350;
     }
     .home__menu .items img:hover {
         @apply scale-[105%] shadow-lg cursor-pointer;
     }
-
+    .home__menu .pop__promos .pop__promos__item {
+        @apply h-32;
+    }
+    .home__menu .pop__promos .pop__promos__item a {
+        @apply text-base font-medium tracking-[2px] font-[Segoe_UI] text-white px-12 py-4 rounded-full transition-all ease-in-out duration-350;
+    }
+    .home__menu .pop__promos .pop__promos__item a:hover {
+        @apply bg-white text-primary;
+    }
 
     .banner .banner__text a:hover {
         @apply lg:text-primary lg:bg-white;
